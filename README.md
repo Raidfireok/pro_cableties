@@ -15,8 +15,8 @@
 --------------------------------------------------------------------------------------------
 5. If you have done all the above it just the normal routine left "start esx_cableties"
 --------------------------------------------------------------------------------------------
-Just to mention these are not part of the ESX family but names it the same to make it easier.
 --------------------------------------------------------------------------------------------
+
 As of now it share the same animation as handcuffs. Might add something uniqe to it later on.
 ---------------------------------------------------------------------------------------------
 
