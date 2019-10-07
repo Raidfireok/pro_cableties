@@ -17,17 +17,18 @@
 Just to mention these are not part of the ESX family but names it the same to make it easier.
 
 As of now it share the same animation as handcuffs. Might add something uniqe to it later on.
-
-
-
-
-
-Legal
-License
+***********************************************************************************************
+*                                                                                             *
+*                                                                                             *
+*                                                                                             *
+*                                                                                             *
+***********************************************************************************************
+# Legal
+# License
 
 pro_busjob
 
-Copyright (C) 2019 Raidfire
+# Copyright (C) 2019 Raidfire
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 
