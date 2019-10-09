@@ -1,33 +1,45 @@
-# Dependensies
-# es_extended
+# Introduction
+This is similar to what esx_handcuffs does. Just diffrent ways of getting loose and animation(hopefully if i can find the correct one) So the code itself on the animationside could be improved. This is meant for civillians but can also be used police. The items added threw the use of the SQL included is knife and cableties. The knife is used to unlock/cut the cableties. 
 
-# This is similar to what esx_handcuffs does. Just diffrent ways of getting loose and animation. 
+# Getting Started
 
-# Installation is simple
+# Installation
 
-1. You should prob edit the sql since you might want to add it to a diffrent shop like blackmarket maybe. Cableties are not limited to police but i would suggest limiting them to blackmarket and police.
-----------------------------------------------------------------------------------------------------------------------------------------
-2. Like handcuffs you need a key to unlock. Here you need a certain knife.
-----------------------------------------------------------------------------------------------------------------------------------------
-3. Also if you are using esx_inventoryhud you will have to add the pngs for the items there also to see them in the inventory. Pngs are added to the repository.
------------------------------------------------------------------------------------------------------------------------------------------
-4. Also should mention that it can be cuppled together with esx_policejob. But then a number of lines needs to be added to that resource. For now its disabled inside client.lua
---------------------------------------------------------------------------------------------
-5. If you have done all the above it just the normal routine left "start esx_cableties"
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
+1. There is an SQL in the folder that adds the items to be used(cableties and knife) and also inserts into DB:`shops`
+   But the SQL is just a basic setup so more "shops" should be added to it(EDIT)
 
-As of now it share the same animation as handcuffs. Might add something uniqe to it later on.
----------------------------------------------------------------------------------------------
+2. PNGS should be added to html/img of esx_shops. And same if your are using esx_inventoryhud
+   Remeber to add them in each __resource.lua to show inventory and shop images.
+
+3. Whats left is adding "start pro_cableties" to your server.cfg
+
+4. # Dependencies: essentialmode, es_extended
+
+5. This is the first release of this so the code could be improved upon.
 
 
----------------------------------------------------------------------------------------------
-# Legal
-# License
+# Testrun of code:
 
-pro_busjob
+1. I have successfully cabletied someone with this. But at the moment the knife would not work. I have made some
+   minor changes after that so they might work now. Have not tested after latest tweak. 
 
-# Copyright (C) 2019 Raidfire
+
+
+# Based on esx_handcuffs 
+
+Feel free to change the code. The thing with this code is that you can multiply it into
+anything. You could 
+           
+
+
+
+
+
+Legal
+License
+
+pro_cableties
+Copyright (C) 2019 Raidfire
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 

@@ -16,6 +16,7 @@ end)
 -- Locals
 
 local tied = false
+local IsCabletied = false
 local dict = "mp_arresting"
 local anim = "idle"
 local flags = 49
@@ -25,7 +26,7 @@ local prevMaleVariation = 0
 local prevFemaleVariation = 0
 local femaleHash = GetHashKey("mp_f_freemode_01")
 local maleHash = GetHashKey("mp_m_freemode_01")
-local IsBreakable    = false
+local IsKnife   = false
 
 -- Put on cableties
 RegisterNetEvent('pro_cableties:tie')
@@ -45,7 +46,7 @@ AddEventHandler('pro_cableties:tie', function()
             SetPedComponentVariation(ped, 7, 41, 0, 0)
         end
 
-        SetEnableHandcuffs(ped, true)
+        SetEnableCableties(ped, true)
         TaskPlayAnim(ped, dict, anim, 8.0, -8, -1, flags, 0, 0, 0, 0)
 
     tied = not tied
@@ -80,11 +81,11 @@ RegisterNetEvent('pro_cableties:cablecheck')
 AddEventHandler('pro_cableties:cablecheck', function()
   local player, distance = ESX.Game.GetClosestPlayer()
   if distance ~= -1 and distance <= 3.0 then
-  				  RequestAnimDict("amb@prop_human_bum_bin@idle_b")
-				  TaskPlayAnim(ped,"amb@prop_human_bum_bin@idle_b","idle_d",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0, 130)
+  				  RequestAnimDict("anim@gangops@facility@servers@bodysearch@")
+				  TaskPlayAnim(ped,"anim@gangops@facility@servers@bodysearch@",100.0, 200.0, 0.3, 120, 0.2, 0, 0, 0, 130)
 								ESX.ShowNotification('~g~You have used your cableties')
 				Wait(8000)
-		TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(player))
+		TriggerServerEvent('esx_policejob:cabletie', GetPlayerServerId(player))
 				ESX.ShowNotification('~r~Person Tied/Loose')
   else
     ESX.ShowNotification('No players nearby')
@@ -106,18 +107,18 @@ AddEventHandler('pro_cableties:cuttingcable', function()
   local player, distance = ESX.Game.GetClosestPlayer()
 	local ped = GetPlayerPed(-1)
 
-	if IsBreakable == false then
+	if IsKnife == false then
 		ESX.UI.Menu.CloseAll()
 		FreezeEntityPosition(player,  true)
 		FreezeEntityPosition(ped,  true)
 
 		TaskStartScenarioInPlace(ped, "WORLD_HUMAN_WELDING", 0, true)
 
-		IsBreakable = false
+		IsKnife = false
 
 		Wait(30000)
 
-		IsBreakable = true
+		IsKnife = true
 
 		FreezeEntityPosition(player,  false)
 		FreezeEntityPosition(ped,  false)
